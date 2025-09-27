@@ -2,6 +2,41 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+// --- fungsi mouse ---
+function handleMouseDown(e) { ... }
+function handleMouseMove(e) { ... }
+function handleMouseUp() { ... }
+
+// --- event mouse ---
+canvas.addEventListener("mousedown", handleMouseDown, false);
+canvas.addEventListener("mousemove", handleMouseMove, false);
+canvas.addEventListener("mouseup", handleMouseUp, false);
+
+// --- event touch ---
+canvas.addEventListener("touchstart", handleTouchStart, false);
+canvas.addEventListener("touchmove", handleTouchMove, false);
+canvas.addEventListener("touchend", handleTouchEnd, false);
+
+function handleTouchStart(e) {
+    const touch = e.touches[0];
+    handleMouseDown({
+        offsetX: touch.clientX - canvas.getBoundingClientRect().left,
+        offsetY: touch.clientY - canvas.getBoundingClientRect().top
+    });
+}
+
+function handleTouchMove(e) {
+    const touch = e.touches[0];
+    handleMouseMove({
+        offsetX: touch.clientX - canvas.getBoundingClientRect().left,
+        offsetY: touch.clientY - canvas.getBoundingClientRect().top
+    });
+}
+
+function handleTouchEnd(e) {
+    handleMouseUp();
+}
+
 const gridSize = 10;
 const cellSize = canvas.width / gridSize;
 const board = Array.from({ length: gridSize }, () => Array(gridSize).fill(0));
@@ -286,3 +321,4 @@ function gameLoop() {
 
 resetGame();
 gameLoop();
+
