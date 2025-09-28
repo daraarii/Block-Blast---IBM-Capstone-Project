@@ -36,10 +36,10 @@ Game Over State → permainan berakhir jika tidak ada lagi block yang bisa ditem
 
 Clone repository:
 
-git clone https://github.com/daraarii/Block-Blast---IBM-Capstone-Project
+git clone https://github.com/daraarii/Block-Blast---IBM-Capstone-Project, 
 deployment https://block-blast-project.netlify.app/ 
 atau
-Buka file index.html menggunakan browser (Chrome/Firefox direkomendasikan)
+buka file index.html menggunakan browser (Chrome/Firefox direkomendasikan)
 Mulai bermain dengan menarik block dari area bawah ke papan
 
 🤖 AI Support Explanation
