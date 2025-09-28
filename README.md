@@ -40,7 +40,7 @@ git clone https://github.com/daraarii/Block-Blast---IBM-Capstone-Project,
 deployment https://block-blast-project.netlify.app/ 
 atau
 buka file index.html menggunakan browser (Chrome/Firefox direkomendasikan)
-Mulai bermain dengan menarik block dari area bawah ke papan
+mulai bermain dengan menarik block dari area bawah ke papan
 
 🤖 AI Support Explanation
 
