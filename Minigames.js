@@ -1,4 +1,4 @@
-// --- Canvas grid setup ---
+// Canvas grid setup 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -23,7 +23,7 @@ let highScore = localStorage.getItem("blockBlastHighScore")
   : 0;
 let gameOver = false;
 
-// --- Block container ---
+// Block container 
 let blockContainer = document.getElementById('blockChoices');
 
 function resetGame() {
@@ -89,7 +89,7 @@ function renderBlockChoices() {
   });
 }
 
-// --- Drag over (shadow positioning presisi) ---
+// Drag over (shadow positioning presisi) 
 canvas.addEventListener('dragover', (e) => {
   e.preventDefault();
   if (!draggingBlock || gameOver) return;
@@ -132,7 +132,7 @@ canvas.addEventListener('drop', () => {
   window._dragShadow = null;
 });
 
-// --- Drawing ---
+// Drawing 
 function drawBoard() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let y = 0; y < gridSize; y++) {
@@ -148,7 +148,7 @@ function drawBoard() {
     }
   }
 
-  // --- Block shadow (brighter) ---
+  // Block shadow 
   if (draggingBlock && window._dragShadow) {
     const { gridX, gridY } = window._dragShadow;
     // Brighter, more visible shadow color
@@ -232,16 +232,16 @@ function checkGameOver() {
   });
 }
 
-// --- Update DOM Score + High Score ---
+// Update DOM Score + High Score 
 function updateScoreDisplay() {
   document.getElementById("scoreDisplay").textContent = score;
   document.getElementById("highScoreDisplay").textContent = "High Score: " + highScore;
 }
 
-// Panggil di awal supaya load dari localStorage
+// Call Score
 updateScoreDisplay();
 
-// Modifikasi bagian clearLines()
+// Modify clearLines
 function clearLines() {
   let cleared = 0;
   for (let y = 0; y < gridSize; y++) {
@@ -266,7 +266,7 @@ function clearLines() {
   }
 }
 
-// Tambahkan juga di resetGame():
+// Reset Game
 function resetGame() {
   for (let y = 0; y < gridSize; y++) {
     for (let x = 0; x < gridSize; x++) {
@@ -286,5 +286,6 @@ function gameLoop() {
 
 resetGame();
 gameLoop();
+
 
 
