@@ -1,29 +1,57 @@
-# Block Blast Minigame
+Block Blast Minigame
+📌 Project Overview
 
-Block Blast Minigame adalah puzzle sederhana berbasis **HTML5 Canvas + JavaScript**.  
-Pemain harus menarik dan menjatuhkan (drag & drop) block ke papan grid untuk membuat garis penuh dari satu sisi ke sisi lain.  
-Setiap garis penuh akan memberi poin, dan skor tertinggi (High Score) akan disimpan di browser.
+Block Blast Minigame adalah permainan puzzle berbasis HTML5 Canvas dan JavaScript
+Pemain harus menarik dan menjatuhkan (drag & drop) block ke papan grid untuk membentuk garis penuh, baik horizontal maupun vertikal
+Setiap garis penuh akan menghapus baris/kolom tersebut dan memberi poin tambahan. Skor tertinggi (High Score) tersimpan otomatis di browser
+Game akan berakhir jika tidak ada lagi ruang untuk menempatkan block
 
----
+⚙️ Technologies Used
 
-## Features
-- **Drag & Drop Blocks** – Tarik block dari bawah dan letakkan ke papan.
-- **Line Clear Mechanic** – Baris/kolom penuh akan hilang, memberi poin tambahan.
-- **High Score System** – Skor tertinggi tersimpan otomatis di browser.
-- **Modern UI** – Grid interaktif dengan animasi halus.
-- **Auto Refresh** – Blok baru akan muncul ketika sudah habis.
-- **Restart** - Player dapat mengulang permainan jika Game Over.
-- **Game Over** - Game akan berakhir jika tidak ada lagi grid yang muat dengan block yang tersisa
+HTML5 Canvas → media utama untuk menggambar papan dan block
 
----
+JavaScript (Vanilla JS) → mengatur logika permainan, drag & drop, skor, dan animasi
 
-## Cara Main
-1. Pilih salah satu block di bagian bawah layar.
-2. Tarik (drag) ke posisi yang diinginkan di papan grid.
-3. Lepaskan (drop) untuk menempatkan block.
-4. Jika berhasil membuat **garis penuh** (horizontal/vertical), kamu akan mendapat poin.
-5. Skor tertinggi akan otomatis tercatat di browser.
-6. Game Over apabila player sudah tidak bisa memasukkan block ke dalam grid
-7. Player mengulang permainan dari awal
+CSS3 → memperindah tampilan antarmuka game
 
----
+LocalStorage → menyimpan skor tertinggi di browser
+
+✨ Features
+
+Drag & Drop Blocks → pemain dapat menarik block dari bawah dan meletakkannya di grid
+
+Line Clear Mechanic → baris/kolom penuh otomatis hilang, memberi poin tambahan
+
+High Score System → skor tertinggi tersimpan di browser secara permanen
+
+UI → grid interaktif dengan tampilan modern dan bayangan halus
+
+Auto Refresh Blocks → block baru otomatis muncul setelah semua block digunakan
+
+Restart Button → pemain dapat memulai ulang permainan kapan saja
+
+Game Over State → permainan berakhir jika tidak ada lagi block yang bisa ditempatkan
+
+🚀 Setup Instructions
+
+Clone repository:
+
+git clone https://github.com/daraarii/Block-Blast---IBM-Capstone-Project
+deployment https://block-blast-project.netlify.app/ 
+atau
+Buka file index.html menggunakan browser (Chrome/Firefox direkomendasikan)
+Mulai bermain dengan menarik block dari area bawah ke papan
+
+🤖 AI Support Explanation
+
+Dalam pengembangan proyek ini, AI IBM Granite digunakan untuk:
+
+Membantu menghasilkan kode boilerplate JavaScript untuk logika drag & drop
+
+Mengoptimalkan algoritma 
+
+Menyediakan saran perbaikan performa dan struktur kode agar lebih efisien.
+
+Membuat dokumentasi dan README yang lebih sistematis dan rapi
+
+Penggunaan AI mempercepat proses coding, debugging, serta dokumentasi sehingga aplikasi dapat dikembangkan lebih cepat dan mudah dipahami.
